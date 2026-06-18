@@ -413,6 +413,7 @@ source venv/bin/activate
 # 4. Instale as dependências
 pip install -r requirements.txt
 
+```
 ▶️ Uso
 1. Treinar Modelos e Gerar Relatórios
 
@@ -474,7 +475,7 @@ Motor de decisão (threshold dinâmico e sistema híbrido)
 Sistema de auto-aprendizado
 Engenharia de features
 Módulo de avaliação
----
+
 📈 Métricas de Negócio
 Além das métricas tradicionais de ML, o projeto calcula métricas de negócio:
 Métrica
@@ -491,7 +492,7 @@ Break-even
 76,9%
 Payback Period
 2,4 meses
-
+```
 🤝 Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para:
 Reportar bugs
