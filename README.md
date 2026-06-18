@@ -518,15 +518,16 @@ Reportar bugs
 Sugerir melhorias  
 Criar pull requests  
 
-### Licença
+### 📄 Licença
 Este projeto está licenciado sob a licença MIT.  
 Veja o arquivo [LICENSE](https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/blob/main/LICENSE) para mais detalhes.  
 
 ### 👤 Autor
 Bruno Fugi   
 Projeto desenvolvido para Bootcamp Bradesco - GenAI, Dados & Cyber   
-GitHub: [@brunofugideoliveiradev](https://github.com/brunofugideoliveiradev)   
-LinkedIn: www.linkedin.com/in/bruno-fugi-de-oliveira-879938414  
+[![GitHub](https://img.shields.io/badge/GitHub-@brunofugideoliveiradev-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brunofugideoliveiradev)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Bruno%20Fugi-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-fugi-de-oliveira-879938414)
+ 
 
 ### 📚 Referências
 - [Credit Card Fraud Detection Dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)  
