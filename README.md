@@ -128,47 +128,133 @@ O projeto possui uma interface web completa com as seguintes seções:
 
 ## 🏗️ Arquitetura do Sistema
 
-```mermaid
-graph TB
-    subgraph Entrada["📥 ENTRADA DE DADOS"]
-        A[Dataset Kaggle<br/>284.807 transações]
-    end
-    
-    subgraph Processamento["⚙️ PROCESSAMENTO"]
-        B[Data Loader<br/>Carregamento]
-        C[Feature Engineering<br/>70+ variáveis]
-        D[Preprocessing<br/>SMOTE + Scaling]
-    end
-    
-    subgraph Modelos["🤖 MODELOS ML/DL"]
-        E1[Random Forest]
-        E2[XGBoost]
-        E3[LightGBM]
-        E4[Voting Classifier]
-        E5[Stacking Ensemble]
-        E6[Isolation Forest]
-        E7[Autoencoder]
-    end
-    
-    subgraph Tecnicas["🎯 TÉCNICAS PROFISSIONAIS"]
-        F1[Threshold Dinâmico]
-        F2[Sistema Híbrido]
-        F3[Auto-Aprendizado]
-        F4[Drift Detection]
-        F5[SHAP Avançado]
-    end
-    
-    subgraph Saidas["📤 SAÍDAS"]
-        G1[Streamlit UI]
-        G2[FastAPI REST]
-        G3[Relatórios PDF]
-        G4[Dashboards]
-    end
-    
-    A --> B --> C --> D
-    D --> E1 & E2 & E3 & E4 & E5 & E6 & E7
-    E1 & E2 & E3 & E4 & E5 & E6 & E7 --> F1 & F2 & F3 & F4 & F5
-    F1 & F2 & F3 & F4 & F5 --> G1 & G2 & G3 & G4
+```
+deteccao-anomalias-xgb/
+│
+├── ENTRADA DE DADOS
+│ ├── Kaggle Credit Card Fraud Dataset
+│ ── 284.807 transações (492 fraudes = 0.173%)
+│
+├── ️ PROCESSAMENTO DE DADOS
+│ ├── data_loader.py # Carregamento do dataset
+│ ├── feature_engineering.py # 70+ features (7 categorias)
+│ │ ├── Temporais (Hour, DayOfWeek, PeriodoDia)
+│ │ ├── Frequência (TransacoesUltimaHora, Velocidade)
+│ │ ├── Valor (MediaMovel, DesvioPadrao, LogAmount)
+│ │ ├── Distância Temporal (TempoDesdeUltima)
+│ │ ├── Interação (Amount_Hour, Freq_Value)
+│ │ ├── Polinomiais (Amount_Squared, Hour_Sin/Cos)
+│ │ └── Risco Composto (RiskScore, HighRiskScore)
+│ └── preprocessing.py # SMOTE, split estratificado, scaling
+│
+├── 🤖 MODELOS DE ML/DL
+│ ├── 📊 SUPERVISIONADOS (8 modelos)
+│ │ ├── Random Forest Pipeline # F1: 80.6%
+│ │ ├── XGBoost Pipeline # F1: 76.8%
+│ │ ├── LightGBM Pipeline # F1: 75.1%
+│ │ ├── Voting Classifier (RF+XGB+LGBM) # F1: 80.8%
+│ │ ├── Stacking Ensemble (RF+XGB→LR) # F1: 69.6%
+│ │ ├── Threshold Dinâmico # F1: 24.4%
+│ │ ├── Sistema Híbrido (Regras+ML) # F1: 24.4%
+│ │ └── Auto-Melhorado (Self-Improvement) # F1: 87.8%
+│ │
+│ └── 🔍 NÃO-SUPERVISIONADOS (2 modelos)
+│ ├── Isolation Forest # F1: 0.5%
+│ └── Autoencoder (TensorFlow) # F1: 12.4%
+│
+├── 🎯 TÉCNICAS PROFISSIONAIS
+│ ├── decision_engine.py # Threshold Dinâmico + Sistema Híbrido
+│ ├── self_improvement.py # Auto-aprendizado e auto-correção
+│ └── model_drift.py # Detecção de drift (KS Test + PSI)
+│
+├── 📈 AVALIAÇÃO E EXPLICABILIDADE
+│ ├── evaluation.py # Métricas (F1, ROC-AUC, PR-AUC)
+│ └── shap_avancado.py # SHAP (dependence, interaction, waterfall)
+│
+├── 📊 RELATÓRIOS E DASHBOARDS
+│ ├── insights.py # Relatório executivo dinâmico
+│ ├── insights_visuais.py # Cards de insights (Matplotlib)
+│ ├── dashboard_profissional.py # Dashboard one-pager
+│ ├── visualizacoes_interativas.py # Gráficos Plotly
+│ └── relatorio_pdf.py # Geração de PDF (FPDF2)
+│
+├── 🌐 INTERFACE E API
+│ ├── app_streamlit.py # Interface web interativa
+│ └── api_fastapi.py # API REST (FastAPI)
+│
+└── 📤 SAÍDAS
+├── models/ # Modelos treinados (.pkl)
+├── results/figures/ # Gráficos e relatórios
+└── results/dados_streamlit.pkl # Dados para dashboard
+
+### 🔄 Fluxo de Dados
+┌─────────────────────────────────────────────────────────────┐
+│ 1. CARREGAMENTO │
+│ Dataset Kaggle → Pandas DataFrame (284.807 × 31) │
+└────────────────────┬────────────────────────────────────────┘
+│
+┌────────────────────▼────────────────────────────────────────┐
+│ 2. ENGENHARIA DE FEATURES (70+ variáveis em 7 categorias) │
+│ • Temporais • Frequência • Valor │
+│ • Distância Temporal • Interação │
+│ • Polinomiais • Risco Composto │
+└────────────────────┬────────────────────────────────────────┘
+│
+┌────────────────────▼────────────────────────────────────────┐
+│ 3. PRÉ-PROCESSAMENTO │
+│ • Split estratificado (80/20) │
+│ • SMOTE (balanceamento no treino) │
+│ • StandardScaler (normalização) │
+└────────────────────┬────────────────────────────────────────┘
+│
+┌────────────────────▼────────────────────────────────────────┐
+│ 4. TREINAMENTO DE 10 MODELOS │
+│ ┌─────────────────────────────────────────────┐ │
+│ │ SUPERVISIONADOS (8 modelos) │ │
+│ │ • Random Forest • XGBoost • LightGBM │ │
+│ │ • Voting Classifier • Stacking Ensemble │ │
+│ │ • Threshold Dinâmico • Sistema Híbrido │ │
+│ │ • Auto-Melhorado (Self-Improvement) │ │
+│ └─────────────────────────────────────────────┘ │
+│ ┌─────────────────────────────────────────────┐ │
+│ │ NÃO-SUPERVISIONADOS (2 modelos) │ │
+│ │ • Isolation Forest • Autoencoder │ │
+│ └─────────────────────────────────────────────┘ │
+└────────────────────┬────────────────────────────────────────┘
+│
+┌────────────────────▼────────────────────────────────────────┐
+│ 5. TÉCNICAS PROFISSIONAIS │
+│ • Threshold Dinâmico (custo financeiro) │
+│ • Sistema Híbrido (Regras + ML) │
+│ • Auto-Aprendizado (Self-Improvement System) │
+│ • Model Drift Detection (KS Test + PSI) │
+│ • SHAP Avançado (Explainability) │
+└────────────────────┬────────────────────────────────────────┘
+│
+┌────────────────────▼────────────────────────────────────────┐
+│ 6. SAÍDAS │
+│ • Interface Web (Streamlit) │
+│ • API REST (FastAPI) │
+│ • Relatórios PDF (FPDF2) │
+│ • Dashboards (Matplotlib/Plotly) │
+│ • Modelos Serializados (Joblib) │
+└─────────────────────────────────────────────────────────────┘
+
+### 📊 Resumo por Camada
+
+| Camada | Componentes | Descrição |
+|--------|:-----------:|-----------|
+| **Entrada** | 1 | Dataset Kaggle (284.807 transações) |
+| **Processamento** | 3 | Data Loader, Feature Engineering, Preprocessing |
+| **Modelos** | 10 | 8 supervisionados + 2 não-supervisionados |
+| **Técnicas** | 3 | Decision Engine, Self-Improvement, Drift Detection |
+| **Avaliação** | 2 | Evaluation, SHAP Avançado |
+| **Visualização** | 5 | Insights, Dashboards, PDF, Plotly |
+| **Interface** | 2 | Streamlit (Web UI), FastAPI (REST API) |
+| **Saídas** | 3 | Models (.pkl), Results (figures), Data (.pkl) |
+
+**Total:** 29 componentes organizados em 8 camadas funcionais
+
 ```
 
 ---
