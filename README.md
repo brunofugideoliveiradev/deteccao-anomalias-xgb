@@ -215,32 +215,90 @@ graph TB
 ---
 
 ## 📁 Estrutura do Projeto
+
+```
 deteccao-anomalias-xgb/
-├── main.py                     # Script principal
-├── app_streamlit.py            # Interface web
-├── api_fastapi.py              # API REST
-├── requirements.txt            # Dependências
 │
-├── src/                        # Módulos
-│   ├── data_loader.py          # Carregamento de dados
-│   ├── preprocessing.py        # Pré-processamento + SMOTE
-│   ├── feature_engineering.py  # 70+ features
-│   ├── models.py               # Modelos ML/DL
-│   ├── pipelines.py            # Pipelines sklearn
-│   ├── autoencoder.py          # Autoencoder (TensorFlow)
-│   ├── decision_engine.py      # Threshold dinâmico
-│   ├── self_improvement.py     # Auto-aprendizado
-│   ├── model_drift.py          # Detecção de drift
-│   ├── evaluation.py           # Métricas e avaliação
-│   ├── shap_avancado.py        # SHAP avançado
-│   ├── insights.py             # Relatório executivo
-│   ├── dashboard_profissional.py # Dashboard
-│   ├── visualizacoes_interativas.py # Gráficos Plotly
-│   ├── relatorio_pdf.py        # PDF (FPDF2)
-│   └── utils.py                # Utilitários
+├── 📄 main.py                          # Script principal (orquestrador)
+├── 📄 app_streamlit.py                 # Interface web interativa
+├── 📄 api_fastapi.py                   # API REST (FastAPI)
+├── 📄 test_models.py                   # Testes unitários
+├── 📄 requirements.txt                 # Dependências do projeto
+├── 📄 .gitignore                       # Ignorados pelo Git
+├── 📄 LICENSE                          # Licença MIT
+└── 📄 README.md                        # Este arquivo
 │
-├── models/                     # Modelos treinados
-└── results/                    # Resultados e visualizações
+├── 📂 src/                             # Módulos do projeto
+│   │
+│   ├── 📊 DADOS E PRÉ-PROCESSAMENTO
+│   │   ├── data_loader.py              # Carregamento do dataset
+│   │   ├── preprocessing.py            # SMOTE, split, scaling
+│   │   └── feature_engineering.py      # 70+ features (7 categorias)
+│   │
+│   ├── 🤖 MODELOS
+│   │   ├── models.py                   # RF, XGB, LGBM, IF, Stacking
+│   │   ├── models_adicionais.py        # Modelos adicionais
+│   │   ├── pipelines.py                # Pipelines sklearn
+│   │   └── autoencoder.py              # Autoencoder TensorFlow
+│   │
+│   ├── 🎯 TÉCNICAS PROFISSIONAIS
+│   │   ├── decision_engine.py          # Threshold dinâmico + Híbrido
+│   │   ├── self_improvement.py         # Auto-aprendizado
+│   │   └── model_drift.py              # Detecção de drift (KS+PSI)
+│   │
+│   ├── 📈 AVALIAÇÃO E EXPLICABILIDADE
+│   │   ├── evaluation.py               # Métricas e visualizações
+│   │   └── shap_avancado.py            # SHAP (dependence, interaction, waterfall)
+│   │
+│   ├── 📊 RELATÓRIOS E DASHBOARDS
+│   │   ├── insights.py                 # Relatório executivo dinâmico
+│   │   ├── insights_visuais.py         # Cards de insights (Matplotlib)
+│   │   ├── dashboard_profissional.py   # Dashboard one-pager
+│   │   ├── visualizacoes_interativas.py # Gráficos Plotly
+│   │   └── relatorio_pdf.py            # Geração de PDF (FPDF2)
+│   │
+│   └── 🔧 UTILITÁRIOS
+│       └── utils.py                    # Logger e helpers
+│
+├── 📂 models/                          # Modelos treinados (gerado)
+│   ├── pipeline_Random_Forest.pkl
+│   ├── pipeline_XGBoost.pkl
+│   ├── pipeline_LightGBM.pkl
+│   ├── pipeline_Voting_Classifier.pkl
+│   ├── pipeline_Stacking_Ensemble.pkl
+│   ├── isolation_forest.pkl
+│   ├── scaler.pkl
+│   └── drift_detector.pkl
+│
+├── 📂 results/                         # Resultados (gerado)
+│   ├── dados_streamlit.pkl             # Dados para Streamlit
+│   └── figures/
+│       ├── cm_*.png                    # Matrizes de confusão
+│       ├── roc_*.png                   # Curvas ROC
+│       ├── pr_*.png                    # Curvas Precision-Recall
+│       ├── shap_*.png                  # Gráficos SHAP
+│       ├── dashboard_*.png             # Dashboards profissionais
+│       ├── insight_*.png               # Cards de insights
+│       └── relatorio_completo_fraudes.pdf
+│
+└── 📂 docs/                            # Documentação
+    └── screenshots/                    # Capturas de tela
+```
+
+### 📊 Resumo por Categoria
+
+| Categoria | Arquivos | Descrição |
+|-----------|:--------:|-----------|
+| **Entrada** | 2 | `main.py`, `data_loader.py` |
+| **Processamento** | 3 | `preprocessing.py`, `feature_engineering.py`, `pipelines.py` |
+| **Modelos** | 4 | `models.py`, `models_adicionais.py`, `autoencoder.py`, `pipelines.py` |
+| **Técnicas** | 3 | `decision_engine.py`, `self_improvement.py`, `model_drift.py` |
+| **Avaliação** | 2 | `evaluation.py`, `shap_avancado.py` |
+| **Visualização** | 5 | `insights.py`, `insights_visuais.py`, `dashboard_profissional.py`, `visualizacoes_interativas.py`, `relatorio_pdf.py` |
+| **Interface** | 2 | `app_streamlit.py`, `api_fastapi.py` |
+| **Utilitários** | 2 | `utils.py`, `test_models.py` |
+
+**Total:** 23 arquivos Python organizados em 8 categorias funcionais
 
 ---
 
