@@ -59,13 +59,11 @@ O projeto possui uma interface web completa com as seguintes seções:
 
 ## 🎬 Demonstração do Projeto
 
-<video src="https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/download/v1.0.0/PROJETO.FRAUDE.CARTAO.mp4" 
-       controls 
-       width="100%" 
-       height="auto" 
-       style="max-width: 800px; border-radius: 8px;">
-  Seu navegador não suporta a tag de vídeo HTML5.
-</video>
+[![🎥 Clique para assistir à demonstração](https://img.shields.io/badge/▶️-Assistir%20Demo-red?style=for-the-badge&logo=youtube)](https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/download/v1.0.0/PROJETO.FRAUDE.CARTAO.mp4)
+
+Ou use o player de vídeo:
+
+<video src="https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/download/v1.0.0/PROJETO.FRAUDE.CARTAO.mp4" controls width="100%"></video>
 
 
 ---
