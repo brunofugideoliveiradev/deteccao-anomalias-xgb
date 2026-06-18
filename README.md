@@ -13,22 +13,22 @@
 
 ## 📋 Índice
 
-- [Visão Geral](#visão-geral)
-- [Demonstração](#demonstração)
-- [Resultados Principais](#resultados-principais)
-- [Funcionalidades](#funcionalidades)
-- [Arquitetura do Sistema](#arquitetura-do-sistema)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Instalação](#instalação)
-- [Uso](#uso)
-- [API REST](#api-rest)
-- [Testes](#testes)
-- [Métricas de Negócio](#métricas-de-negócio)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
-- [Autor](#autor)
-- [Referências](#referências)
+- [Visão Geral](#-visão-geral)
+- [Demonstração](#-demonstração)
+- [Resultados Principais](#-resultados-principais)
+- [Funcionalidades](#-funcionalidades)
+- [Arquitetura do Sistema](#-arquitetura-do-sistema)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Instalação](#-instalação)
+- [Uso](#-uso)
+- [API REST](#-api-rest)
+- [Testes](#-testes)
+- [Métricas de Negócio](#-métricas-de-negócio)
+- [Contribuição](#-contribuição)
+- [Licença](#-licença)
+- [Autor](#-autor)
+- [Referências](#-referências)
 
 ---
 
