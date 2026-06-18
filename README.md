@@ -57,11 +57,16 @@ O projeto possui uma interface web completa com as seguintes seções:
 - **Monitoramento de Drift** - Detecção de mudanças na distribuição
 - **Sobre o Projeto** - Documentação completa
 
-## 🎬 Demonstração
-
-
 📹 **Vídeo do Projeto:**
-- [Download/Assistir no GitHub](https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/download/v1.0.0/PROJETO.FRAUDE.CARTAO.mp4)
+## 🎬 Demonstração do Projeto
+
+<video src="https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/download/v1.0.0/PROJETO.FRAUDE.CARTAO.mp4" 
+       controls 
+       width="100%" 
+       height="auto" 
+       style="max-width: 800px; border-radius: 8px;">
+  Seu navegador não suporta a tag de vídeo HTML5.
+</video>
 
 
 ---
