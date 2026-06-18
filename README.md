@@ -134,7 +134,7 @@ graph TB
         A[Dataset Kaggle<br/>284.807 transações]
     end
     
-    subgraph Processamento["️ PROCESSAMENTO"]
+    subgraph Processamento["⚙️ PROCESSAMENTO"]
         B[Data Loader<br/>Carregamento]
         C[Feature Engineering<br/>70+ variáveis]
         D[Preprocessing<br/>SMOTE + Scaling]
@@ -150,7 +150,7 @@ graph TB
         E7[Autoencoder]
     end
     
-    subgraph Tecnicas[" TÉCNICAS PROFISSIONAIS"]
+    subgraph Tecnicas["🎯 TÉCNICAS PROFISSIONAIS"]
         F1[Threshold Dinâmico]
         F2[Sistema Híbrido]
         F3[Auto-Aprendizado]
