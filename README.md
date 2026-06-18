@@ -433,6 +433,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 ```
+---
 ▶️ Uso
 1. Treinar Modelos e Gerar Relatórios
 
@@ -459,11 +460,7 @@ Tempo estimado: ~30-40 minutos
  
 Acesse: http://localhost:8501
 
-3. API REST (FastAPI)
-
-Acesse a documentação: http://localhost:8000/docs
-
-4. Testes Unitários
+---
 
 🔌 API REST
 Endpoints
