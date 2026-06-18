@@ -59,22 +59,22 @@ O projeto possui uma interface web completa com as seguintes seções:
 
 ## 🎬 Demonstração do Projeto
 
-<div align="center">
+<div align="left">
 
 ### 📹 Vídeo de Demonstração
 
-<p align="center">
+<p align="left">
   <a href="https://youtu.be/Fj2eMoZ_vN8" target="_blank">
     <img src="https://img.youtube.com/vi/Fj2eMoZ_vN8/maxresdefault.jpg" 
          alt="Demo do Projeto - Detecção de Fraudes" 
-         width="800" 
+         width="400" 
          style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
   </a>
 </p>
 
 <br>
 
-<div align="center">
+<div align="left">
   <a href="https://youtu.be/Fj2eMoZ_vN8" target="_blank">
     <img src="https://img.shields.io/badge/▶️_Assistir_no_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Assistir no YouTube">
   </a>
