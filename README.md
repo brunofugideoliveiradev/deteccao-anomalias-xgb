@@ -84,33 +84,6 @@ O projeto possui uma interface web completa com as seguintes seções:
   </a>
 </div>
 
-<br>
-
-<details>
-<summary><strong>📋 O que você vai ver no vídeo:</strong></summary>
-
-<br>
-
-- 🎯 **Dashboard interativo** com ranking de modelos e métricas em tempo real
-- 🔬 **Simulador de detecção** de fraudes com modelo treinado
-- 📈 **Análise comparativa** de 10 modelos de ML/DL (Random Forest, XGBoost, LightGBM, etc.)
-- 💰 **Métricas de negócio avançadas** (ROI, Break-even, Payback Period, TCO)
-- 📉 **Monitoramento de Model Drift** com KS Test e PSI
-- 🎯 **Matrizes de Confusão** e Curvas ROC interativas
-- 🔬 **SHAP Avançado** (dependence plots, interaction matrix, waterfall)
-- 📄 **Geração automática** de relatórios PDF profissionais
-- ⚙️ **Sistema Híbrido** (Regras de Negócio + ML)
-- 🧠 **Auto-aprendizado** (Self-Improvement System)
-
-**Duração:** ~5 minutos  
-**Qualidade:** Full HD (1080p)  
-**Formato:** MP4 (94MB)
-
-</details>
-
-</div>
-
----
 ---
 
 ##  Resultados Principais
