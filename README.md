@@ -17,7 +17,7 @@
 - [Demonstração](#-demonstração)
 - [Resultados Principais](#-resultados-principais)
 - [Funcionalidades](#-funcionalidades)
-- [Arquitetura do Sistema](#-arquitetura-do-sistema)
+- [Arquitetura do Sistema](#%EF%B8%8F-arquitetura-do-sistema)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Instalação](#-instalação)
