@@ -495,8 +495,8 @@ Payback Period
 ```
 ### 🤝 Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para:
-Reportar bugs
-Sugerir melhorias
+Reportar bugs,
+Sugerir melhorias,
 Criar pull requests
 
 ### Licença
