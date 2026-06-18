@@ -79,7 +79,7 @@ O projeto possui uma interface web completa com as seguintes seções:
     <img src="https://img.shields.io/badge/▶️_Assistir_no_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Assistir no YouTube">
   </a>
   
-  <a href="https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/tag/v1.0.0" target="_blank">
+  <a href="[https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/tag/v1.0.0](https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/download/v1.0.0/PROJETO.FRAUDE.CARTAO.mp4)" target="_blank">
     <img src="https://img.shields.io/badge/📥_Baixar_Vídeo_GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Baixar no GitHub">
   </a>
 </div>
