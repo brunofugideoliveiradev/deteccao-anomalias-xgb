@@ -500,12 +500,12 @@ Sugerir melhorias,
 Criar pull requests
 
 ### Licença
-Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/blob/main/LICENSE) para mais detalhes.
 ### 👤 Autor
-Bruno Fugi
-Bootcamp Bradesco - GenAI, Dados & Cyber
-GitHub: [@brunofugideoliveiradev](https://github.com/brunofugideoliveiradev)
-LinkedIn: www.linkedin.com/in/bruno-fugi-de-oliveira-879938414
+Bruno Fugi -  
+Bootcamp Bradesco - GenAI, Dados & Cyber -  
+GitHub: [@brunofugideoliveiradev](https://github.com/brunofugideoliveiradev) -  
+LinkedIn: www.linkedin.com/in/bruno-fugi-de-oliveira-879938414  
 
 ### 📚 Referências
 Credit Card Fraud Detection Dataset
@@ -516,7 +516,7 @@ Streamlit Documentation
 FastAPI Documentation
 
 
-Desenvolvido para: Bootcamp Bradesco - GenAI, Dados & Cyber | 2026
+Desenvolvido para: Bootcamp Bradesco - GenAI, Dados & Cyber | 2026  
 ⭐ Se este projeto foi útil, considere dar uma estrela!
 
 
