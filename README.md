@@ -85,7 +85,7 @@ O projeto possui uma interface web completa com as seguintes seções:
 </div>
 
 ---
-
+---
 ##  Resultados Principais
 
 | Métrica | Valor |
