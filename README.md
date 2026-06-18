@@ -474,7 +474,7 @@ Motor de decisão (threshold dinâmico e sistema híbrido)
 Sistema de auto-aprendizado
 Engenharia de features
 Módulo de avaliação
-
+---
 📈 Métricas de Negócio
 Além das métricas tradicionais de ML, o projeto calcula métricas de negócio:
 Métrica
