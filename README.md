@@ -493,21 +493,21 @@ Break-even
 Payback Period
 2,4 meses
 ```
-🤝 Contribuição
+###🤝 Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para:
 Reportar bugs
 Sugerir melhorias
 Criar pull requests
 
-Licença
+###Licença
 Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
-👤 Autor
+###👤 Autor
 Bruno Fugi
 Bootcamp Bradesco - GenAI, Dados & Cyber
 GitHub: [@brunofugideoliveiradev](https://github.com/brunofugideoliveiradev)
 LinkedIn: www.linkedin.com/in/bruno-fugi-de-oliveira-879938414
 
-📚 Referências
+###📚 Referências
 Credit Card Fraud Detection Dataset
 Scikit-learn Documentation
 XGBoost Documentation
