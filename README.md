@@ -284,18 +284,28 @@ pip install -r requirements.txt
 
 Este comando irá:
 Carregar o dataset (284.807 transações)
+
 Aplicar engenharia de features (70+ variáveis)
+
 Treinar 10 modelos de ML/DL
+
 Aplicar técnicas profissionais (Threshold Dinâmico, Sistema Híbrido, Auto-aprendizado)
+
 Detectar Model Drift
+
 Gerar SHAP avançado
+
 Criar relatórios PDF e dashboards
+
 Salvar modelos treinados
+
 Tempo estimado: ~30-40 minutos
+
 2. Interface Web (Streamlit)
+3. 
 Acesse: http://localhost:8501
 
-3. API REST (FastAPI)
+4. API REST (FastAPI)
 
 Acesse a documentação: http://localhost:8000/docs
 
