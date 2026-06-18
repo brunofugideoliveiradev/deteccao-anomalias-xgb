@@ -356,19 +356,17 @@ deteccao-anomalias-xgb/
 │   ├── scaler.pkl
 │   └── drift_detector.pkl
 │
-├── 📂 results/                         # Resultados (gerado)
-│   ├── dados_streamlit.pkl             # Dados para Streamlit
-│   └── figures/
-│       ├── cm_*.png                    # Matrizes de confusão
-│       ├── roc_*.png                   # Curvas ROC
-│       ├── pr_*.png                    # Curvas Precision-Recall
-│       ├── shap_*.png                  # Gráficos SHAP
-│       ├── dashboard_*.png             # Dashboards profissionais
-│       ├── insight_*.png               # Cards de insights
-│       └── relatorio_completo_fraudes.pdf
-│
-└── 📂 docs/                            # Documentação
-    └── screenshots/                    # Capturas de tela
+├── 📂 results/                        # Resultados (gerado)
+   ├── dados_streamlit.pkl             # Dados para Streamlit
+   └── figures/
+       ├── cm_*.png                    # Matrizes de confusão
+       ├── roc_*.png                   # Curvas ROC
+       ├── pr_*.png                    # Curvas Precision-Recall
+       ├── shap_*.png                  # Gráficos SHAP
+       ├── dashboard_*.png             # Dashboards profissionais
+       ├── insight_*.png               # Cards de insights
+       └── relatorio_completo_fraudes.pdf
+
 ```
 
 ### 📊 Resumo por Categoria
