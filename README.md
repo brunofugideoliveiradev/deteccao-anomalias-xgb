@@ -83,7 +83,7 @@ O projeto possui uma interface web completa com as seguintes seções:
     <img src="https://img.shields.io/badge/📥_Baixar_Vídeo_GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Baixar no GitHub">
   </a>
 </div>
-
+<br>
 ---
 ---
 ##  Resultados Principais
