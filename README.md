@@ -216,69 +216,31 @@ graph TB
 
 ## 📁 Estrutura do Projeto
 deteccao-anomalias-xgb/
+├── main.py                     # Script principal
+├── app_streamlit.py            # Interface web
+├── api_fastapi.py              # API REST
+├── requirements.txt            # Dependências
 │
-├── 📄 main.py # Script principal (orquestrador)
-├── app_streamlit.py # Interface web interativa
-├── 📄 api_fastapi.py # API REST (microsserviço)
-├── 📄 requirements.txt # Dependências do projeto
-├── 📄 test_models.py # Testes unitários
-├── 📄 gerar_dados_teste.py # Gerador de dados de teste
+├── src/                        # Módulos
+│   ├── data_loader.py          # Carregamento de dados
+│   ├── preprocessing.py        # Pré-processamento + SMOTE
+│   ├── feature_engineering.py  # 70+ features
+│   ├── models.py               # Modelos ML/DL
+│   ├── pipelines.py            # Pipelines sklearn
+│   ├── autoencoder.py          # Autoencoder (TensorFlow)
+│   ├── decision_engine.py      # Threshold dinâmico
+│   ├── self_improvement.py     # Auto-aprendizado
+│   ├── model_drift.py          # Detecção de drift
+│   ├── evaluation.py           # Métricas e avaliação
+│   ├── shap_avancado.py        # SHAP avançado
+│   ├── insights.py             # Relatório executivo
+│   ├── dashboard_profissional.py # Dashboard
+│   ├── visualizacoes_interativas.py # Gráficos Plotly
+│   ├── relatorio_pdf.py        # PDF (FPDF2)
+│   └── utils.py                # Utilitários
 │
-├── 📂 src/ # Módulos do projeto
-│ ├── 📄 init.py
-│ │
-│ ├── 📊 DADOS E PRÉ-PROCESSAMENTO
-│ │ ├── data_loader.py # Carregamento do dataset
-│ │ ├── preprocessing.py # SMOTE, split, scaling
-│ │ └── feature_engineering.py # 70+ features (7 categorias)
-│ │
-│ ├── 🤖 MODELOS
-│ │ ├── models.py # RF, XGB, LGBM, IF
-│ │ ├── models_adicionais.py # LOF, SVM (compatibilidade)
-│ │ ├── pipelines.py # Pipelines sklearn
-│ │ └── autoencoder.py # Autoencoder TensorFlow
-│ │
-│ ├── TÉCNICAS PROFISSIONAIS
-│ │ ├── decision_engine.py # Threshold dinâmico + Híbrido
-│ │ ├── self_improvement.py # Auto-aprendizado
-│ │ └── model_drift.py # Detecção de drift (KS+PSI)
-│ │
-│ ├── AVALIAÇÃO E EXPLICABILIDADE
-│ │ ├── evaluation.py # Métricas e visualizações
-│ │ └── shap_avancado.py # SHAP (dependence, interaction, waterfall)
-│ │
-│ ├── 📊 RELATÓRIOS E DASHBOARDS
-│ │ ├── insights.py # Relatório executivo dinâmico
-│ │ ├── insights_visuais.py # Cards de insights (Matplotlib)
-│ │ ├── dashboard_profissional.py # Dashboard one-pager
-│ │ ├── visualizacoes_interativas.py # Gráficos Plotly
-│ │ └── relatorio_pdf.py # Geração de PDF (FPDF2)
-│ │
-│ └── 🔧 UTILITÁRIOS
-│ └── utils.py # Logger e helpers
-│
-── 📂 models/ # Modelos treinados (gerado)
-│ ├── pipeline_Random_Forest.pkl
-│ ├── pipeline_XGBoost.pkl
-│ ├── pipeline_LightGBM.pkl
-│ ├── pipeline_Voting_Classifier.pkl
-│ ├── pipeline_Stacking_Ensemble.pkl
-│ ├── isolation_forest.pkl
-│ └── drift_detector.pkl
-│
-├── 📂 results/ # Resultados (gerado)
-│ ├── dados_streamlit.pkl # Dados para Streamlit
-│ └── figures/
-│ ├── cm_*.png # Matrizes de confusão
-│ ├── roc_*.png # Curvas ROC
-│ ├── pr_*.png # Curvas Precision-Recall
-│ ├── shap_*.png # Gráficos SHAP
-│ ├── dashboard_*.png # Dashboards profissionais
-│ ├── insight_*.png # Cards de insights
-│ └── relatorio_completo_fraudes.pdf
-│
-└── 📂 tests/ # Testes
-└── init.py
+├── models/                     # Modelos treinados
+└── results/                    # Resultados e visualizações
 
 ---
 
