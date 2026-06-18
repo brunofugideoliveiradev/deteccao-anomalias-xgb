@@ -302,14 +302,14 @@ Salvar modelos treinados
 Tempo estimado: ~30-40 minutos
 
 2. Interface Web (Streamlit)
-3. 
+ 
 Acesse: http://localhost:8501
 
 4. API REST (FastAPI)
 
 Acesse a documentação: http://localhost:8000/docs
 
-4. Testes Unitários
+5. Testes Unitários
 
 🔌 API REST
 Endpoints
