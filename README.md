@@ -59,13 +59,58 @@ O projeto possui uma interface web completa com as seguintes seções:
 
 ## 🎬 Demonstração do Projeto
 
-[![🎥 Clique para assistir à demonstração](https://img.shields.io/badge/▶️-Assistir%20Demo-red?style=for-the-badge&logo=youtube)](https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/download/v1.0.0/PROJETO.FRAUDE.CARTAO.mp4)
+<div align="center">
 
-Ou use o player de vídeo:
+### 📹 Vídeo de Demonstração
 
-<video src="https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/download/v1.0.0/PROJETO.FRAUDE.CARTAO.mp4" controls width="100%"></video>
+<p align="center">
+  <a href="https://youtu.be/Fj2eMoZ_vN8" target="_blank">
+    <img src="https://img.youtube.com/vi/Fj2eMoZ_vN8/maxresdefault.jpg" 
+         alt="Demo do Projeto - Detecção de Fraudes" 
+         width="800" 
+         style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+  </a>
+</p>
 
+<br>
 
+<div align="center">
+  <a href="https://youtu.be/Fj2eMoZ_vN8" target="_blank">
+    <img src="https://img.shields.io/badge/▶️_Assistir_no_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Assistir no YouTube">
+  </a>
+  
+  <a href="https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/tag/v1.0.0" target="_blank">
+    <img src="https://img.shields.io/badge/📥_Baixar_Vídeo_GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Baixar no GitHub">
+  </a>
+</div>
+
+<br>
+
+<details>
+<summary><strong>📋 O que você vai ver no vídeo:</strong></summary>
+
+<br>
+
+- 🎯 **Dashboard interativo** com ranking de modelos e métricas em tempo real
+- 🔬 **Simulador de detecção** de fraudes com modelo treinado
+- 📈 **Análise comparativa** de 10 modelos de ML/DL (Random Forest, XGBoost, LightGBM, etc.)
+- 💰 **Métricas de negócio avançadas** (ROI, Break-even, Payback Period, TCO)
+- 📉 **Monitoramento de Model Drift** com KS Test e PSI
+- 🎯 **Matrizes de Confusão** e Curvas ROC interativas
+- 🔬 **SHAP Avançado** (dependence plots, interaction matrix, waterfall)
+- 📄 **Geração automática** de relatórios PDF profissionais
+- ⚙️ **Sistema Híbrido** (Regras de Negócio + ML)
+- 🧠 **Auto-aprendizado** (Self-Improvement System)
+
+**Duração:** ~5 minutos  
+**Qualidade:** Full HD (1080p)  
+**Formato:** MP4 (94MB)
+
+</details>
+
+</div>
+
+---
 ---
 
 ##  Resultados Principais
