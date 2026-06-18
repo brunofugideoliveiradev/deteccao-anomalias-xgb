@@ -524,7 +524,8 @@ Veja o arquivo [LICENSE](https://github.com/brunofugideoliveiradev/deteccao-anom
 
 ### 👤 Autor
 Bruno Fugi     
-Projeto desenvolvido para Bootcamp Bradesco - GenAI, Dados & Cyber     
+Projeto desenvolvido para Bootcamp Bradesco - GenAI, Dados & Cyber  
+
 [![GitHub](https://img.shields.io/badge/GitHub-@brunofugideoliveiradev-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brunofugideoliveiradev)  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Bruno%20Fugi-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-fugi-de-oliveira-879938414)
  
