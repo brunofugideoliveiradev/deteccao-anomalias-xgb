@@ -305,11 +305,11 @@ Tempo estimado: ~30-40 minutos
  
 Acesse: http://localhost:8501
 
-4. API REST (FastAPI)
+3. API REST (FastAPI)
 
 Acesse a documentação: http://localhost:8000/docs
 
-5. Testes Unitários
+4. Testes Unitários
 
 🔌 API REST
 Endpoints
