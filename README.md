@@ -298,6 +298,7 @@ Acesse: http://localhost:8501
 3. API REST (FastAPI)
 
 Acesse a documentação: http://localhost:8000/docs
+
 4. Testes Unitários
 
 🔌 API REST
