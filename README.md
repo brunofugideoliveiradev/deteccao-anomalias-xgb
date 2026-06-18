@@ -433,8 +433,8 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 ```
----
-▶️ Uso
+```
+### ▶️ Uso
 1. Treinar Modelos e Gerar Relatórios
 
 Este comando irá:
@@ -462,7 +462,7 @@ Acesse: http://localhost:8501
 
 ---
 
-🔌 API REST
+###🔌 API REST
 Endpoints
 Método
 Endpoint
@@ -484,7 +484,9 @@ Exemplo de Request
 Exemplo de Response
 json
 
-Testes
+---
+
+### Testes
 O projeto inclui testes unitários para:
 Pipelines de ML
 Motor de decisão (threshold dinâmico e sistema híbrido)
@@ -535,6 +537,7 @@ Projeto desenvolvido para Bootcamp Bradesco - GenAI, Dados & Cyber
 - [Streamlit Documentation](https://docs.streamlit.io/)  
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)  
 
+```
 
 Desenvolvido para: Bootcamp Bradesco - GenAI, Dados & Cyber | 2026  
 ⭐ Se este projeto foi útil, considere dar uma estrela!
