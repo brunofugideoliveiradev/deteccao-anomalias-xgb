@@ -494,26 +494,28 @@ Payback Period
 2,4 meses
 ```
 ### 🤝 Contribuição
-Contribuições são bem-vindas! Sinta-se à vontade para:
-Reportar bugs,
-Sugerir melhorias,
-Criar pull requests
+Contribuições são bem-vindas! Sinta-se à vontade para:  
+Reportar bugs  
+Sugerir melhorias  
+Criar pull requests  
 
 ### Licença
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/blob/main/LICENSE) para mais detalhes.
+Este projeto está licenciado sob a licença MIT.  
+Veja o arquivo [LICENSE](https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/blob/main/LICENSE) para mais detalhes.  
+
 ### 👤 Autor
-Bruno Fugi -  
-Bootcamp Bradesco - GenAI, Dados & Cyber -  
-GitHub: [@brunofugideoliveiradev](https://github.com/brunofugideoliveiradev) -  
+Bruno Fugi   
+Projeto desenvolvido para Bootcamp Bradesco - GenAI, Dados & Cyber   
+GitHub: [@brunofugideoliveiradev](https://github.com/brunofugideoliveiradev)   
 LinkedIn: www.linkedin.com/in/bruno-fugi-de-oliveira-879938414  
 
 ### 📚 Referências
-Credit Card Fraud Detection Dataset
-Scikit-learn Documentation
-XGBoost Documentation
-TensorFlow Documentation
-Streamlit Documentation
-FastAPI Documentation
+- [Credit Card Fraud Detection Dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)  
+- [Scikit-learn Documentation](https://scikit-learn.org/stable/)  
+- [XGBoost Documentation](https://xgboost.readthedocs.io/en/stable/)  
+- [TensorFlow Documentation](https://www.tensorflow.org/)  
+- [Streamlit Documentation](https://docs.streamlit.io/)  
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)  
 
 
 Desenvolvido para: Bootcamp Bradesco - GenAI, Dados & Cyber | 2026  
