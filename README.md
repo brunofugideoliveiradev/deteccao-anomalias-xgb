@@ -459,10 +459,10 @@ Tempo estimado: ~30-40 minutos
 2. Interface Web (Streamlit)
  
 Acesse: http://localhost:8501
+```
+```
+###🔌API REST
 
----
-
-###🔌 API REST
 Endpoints
 Método
 Endpoint
@@ -484,8 +484,6 @@ Exemplo de Request
 Exemplo de Response
 json
 
----
-
 ### Testes
 O projeto inclui testes unitários para:
 Pipelines de ML
@@ -493,6 +491,7 @@ Motor de decisão (threshold dinâmico e sistema híbrido)
 Sistema de auto-aprendizado
 Engenharia de features
 Módulo de avaliação
+```
 
 📈 Métricas de Negócio
 Além das métricas tradicionais de ML, o projeto calcula métricas de negócio:
