@@ -10,7 +10,6 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
-
 ## 📋 Índice
 
 - [Visão Geral](#-visão-geral)
@@ -18,10 +17,10 @@
 - [Resultados Principais](#-resultados-principais)
 - [Funcionalidades](#-funcionalidades)
 - [Arquitetura do Sistema](#%EF%B8%8F-arquitetura-do-sistema)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Tecnologias Utilizadas](#%EF%B8%8F-tecnologias-utilizadas)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Instalação](#-instalação)
-- [Uso](#-uso)
+- [Uso](#%EF%B8%8F-uso)
 - [API REST](#-api-rest)
 - [Testes](#-testes)
 - [Métricas de Negócio](#-métricas-de-negócio)
