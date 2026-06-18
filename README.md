@@ -13,20 +13,22 @@
 
 ## 📋 Índice
 
-- [Visão Geral](#-visão-geral)
-- [Demonstração](#-demonstração)
-- [Resultados Principais](#-resultados-principais)
-- [Funcionalidades](#-funcionalidades)
-- [Arquitetura do Sistema](#-arquitetura-do-sistema)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Instalação](#-instalação)
-- [Uso](#-uso)
-- [API REST](#-api-rest)
-- [Testes](#-testes)
-- [Contribuição](#-contribuição)
-- [Licença](#-licença)
-- [Autor](#-autor)
+- [Visão Geral](#visão-geral)
+- [Demonstração](#demonstração)
+- [Resultados Principais](#resultados-principais)
+- [Funcionalidades](#funcionalidades)
+- [Arquitetura do Sistema](#arquitetura-do-sistema)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [API REST](#api-rest)
+- [Testes](#testes)
+- [Métricas de Negócio](#métricas-de-negócio)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
+- [Autor](#autor)
+- [Referências](#referências)
 
 ---
 
@@ -44,22 +46,7 @@ O sistema combina:
 
 ---
 
-## 📊 Demonstração
-
-### Interface Web (Streamlit)
-
-O projeto possui uma interface web completa com as seguintes seções:
-
-- **Dashboard Geral** - Visão executiva com ranking de modelos e métricas
-- **Testar Transação (REAL)** - Simulador com modelo treinado
-- **Análise de Modelos** - Comparação detalhada com seletor por modelo
-- **Impacto Financeiro** - Análise por modelo com métricas de negócio
-- **Monitoramento de Drift** - Detecção de mudanças na distribuição
-- **Sobre o Projeto** - Documentação completa
-
-## 🎬 Demonstração do Projeto
-
-<div align="left">
+## 🎬 Demonstração
 
 ### 📹 Vídeo de Demonstração
 
@@ -79,14 +66,25 @@ O projeto possui uma interface web completa com as seguintes seções:
     <img src="https://img.shields.io/badge/▶️_Assistir_no_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Assistir no YouTube">
   </a>
   
-  <a href="[https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/tag/v1.0.0](https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/download/v1.0.0/PROJETO.FRAUDE.CARTAO.mp4)" target="_blank">
+  <a href="https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/releases/download/v1.0.0/PROJETO.FRAUDE.CARTAO.mp4" target="_blank">
     <img src="https://img.shields.io/badge/📥_Baixar_Vídeo_GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="Baixar no GitHub">
   </a>
 </div>
----
+
+### Interface Web (Streamlit)
+
+O projeto possui uma interface web completa com as seguintes seções:
+
+- **Dashboard Geral** - Visão executiva com ranking de modelos e métricas
+- **Testar Transação (REAL)** - Simulador com modelo treinado
+- **Análise de Modelos** - Comparação detalhada com seletor por modelo
+- **Impacto Financeiro** - Análise por modelo com métricas de negócio
+- **Monitoramento de Drift** - Detecção de mudanças na distribuição
+- **Sobre o Projeto** - Documentação completa
 
 ---
-##  Resultados Principais
+
+## 🏆 Resultados Principais
 
 | Métrica | Valor |
 |---------|-------|
@@ -152,114 +150,118 @@ O projeto possui uma interface web completa com as seguintes seções:
 ```
 deteccao-anomalias-xgb/
 │
-├── ENTRADA DE DADOS
-│ ├── Kaggle Credit Card Fraud Dataset
-│ ── 284.807 transações (492 fraudes = 0.173%)
+├── 📥 ENTRADA DE DADOS
+│   ├── Kaggle Credit Card Fraud Dataset
+│   └── 284.807 transações (492 fraudes = 0.173%)
 │
-├── ️ PROCESSAMENTO DE DADOS
-│ ├── data_loader.py # Carregamento do dataset
-│ ├── feature_engineering.py # 70+ features (7 categorias)
-│ │ ├── Temporais (Hour, DayOfWeek, PeriodoDia)
-│ │ ├── Frequência (TransacoesUltimaHora, Velocidade)
-│ │ ├── Valor (MediaMovel, DesvioPadrao, LogAmount)
-│ │ ├── Distância Temporal (TempoDesdeUltima)
-│ │ ├── Interação (Amount_Hour, Freq_Value)
-│ │ ├── Polinomiais (Amount_Squared, Hour_Sin/Cos)
-│ │ └── Risco Composto (RiskScore, HighRiskScore)
-│ └── preprocessing.py # SMOTE, split estratificado, scaling
+├── ⚙️ PROCESSAMENTO DE DADOS
+│   ├── data_loader.py              # Carregamento do dataset
+│   ├── feature_engineering.py      # 70+ features (7 categorias)
+│   │   ├── Temporais (Hour, DayOfWeek, PeriodoDia)
+│   │   ├── Frequência (TransacoesUltimaHora, Velocidade)
+│   │   ├── Valor (MediaMovel, DesvioPadrao, LogAmount)
+│   │   ├── Distância Temporal (TempoDesdeUltima)
+│   │   ├── Interação (Amount_Hour, Freq_Value)
+│   │   ├── Polinomiais (Amount_Squared, Hour_Sin/Cos)
+│   │   └── Risco Composto (RiskScore, HighRiskScore)
+│   └── preprocessing.py            # SMOTE, split estratificado, scaling
 │
 ├── 🤖 MODELOS DE ML/DL
-│ ├── 📊 SUPERVISIONADOS (8 modelos)
-│ │ ├── Random Forest Pipeline # F1: 80.6%
-│ │ ├── XGBoost Pipeline # F1: 76.8%
-│ │ ├── LightGBM Pipeline # F1: 75.1%
-│ │ ├── Voting Classifier (RF+XGB+LGBM) # F1: 80.8%
-│ │ ├── Stacking Ensemble (RF+XGB→LR) # F1: 69.6%
-│ │ ├── Threshold Dinâmico # F1: 24.4%
-│ │ ├── Sistema Híbrido (Regras+ML) # F1: 24.4%
-│ │ └── Auto-Melhorado (Self-Improvement) # F1: 87.8%
-│ │
-│ └── 🔍 NÃO-SUPERVISIONADOS (2 modelos)
-│ ├── Isolation Forest # F1: 0.5%
-│ └── Autoencoder (TensorFlow) # F1: 12.4%
+│   ├── 📊 SUPERVISIONADOS (8 modelos)
+│   │   ├── Random Forest Pipeline          # F1: 80.6%
+│   │   ├── XGBoost Pipeline                # F1: 76.8%
+│   │   ├── LightGBM Pipeline               # F1: 75.1%
+│   │   ├── Voting Classifier (RF+XGB+LGBM) # F1: 80.8%
+│   │   ├── Stacking Ensemble (RF+XGB→LR)   # F1: 69.6%
+│   │   ├── Threshold Dinâmico              # F1: 24.4%
+│   │   ├── Sistema Híbrido (Regras+ML)     # F1: 24.4%
+│   │   └── Auto-Melhorado (Self-Improvement) # F1: 87.8%
+│   │
+│   └── 🔍 NÃO-SUPERVISIONADOS (2 modelos)
+│       ├── Isolation Forest                # F1: 0.5%
+│       └── Autoencoder (TensorFlow)        # F1: 12.4%
 │
 ├── 🎯 TÉCNICAS PROFISSIONAIS
-│ ├── decision_engine.py # Threshold Dinâmico + Sistema Híbrido
-│ ├── self_improvement.py # Auto-aprendizado e auto-correção
-│ └── model_drift.py # Detecção de drift (KS Test + PSI)
+│   ├── decision_engine.py          # Threshold Dinâmico + Sistema Híbrido
+│   ├── self_improvement.py         # Auto-aprendizado e auto-correção
+│   └── model_drift.py              # Detecção de drift (KS Test + PSI)
 │
 ├── 📈 AVALIAÇÃO E EXPLICABILIDADE
-│ ├── evaluation.py # Métricas (F1, ROC-AUC, PR-AUC)
-│ └── shap_avancado.py # SHAP (dependence, interaction, waterfall)
+│   ├── evaluation.py               # Métricas (F1, ROC-AUC, PR-AUC)
+│   └── shap_avancado.py            # SHAP (dependence, interaction, waterfall)
 │
 ├── 📊 RELATÓRIOS E DASHBOARDS
-│ ├── insights.py # Relatório executivo dinâmico
-│ ├── insights_visuais.py # Cards de insights (Matplotlib)
-│ ├── dashboard_profissional.py # Dashboard one-pager
-│ ├── visualizacoes_interativas.py # Gráficos Plotly
-│ └── relatorio_pdf.py # Geração de PDF (FPDF2)
+│   ├── insights.py                 # Relatório executivo dinâmico
+│   ├── insights_visuais.py         # Cards de insights (Matplotlib)
+│   ├── dashboard_profissional.py   # Dashboard one-pager
+│   ├── visualizacoes_interativas.py # Gráficos Plotly
+│   └── relatorio_pdf.py            # Geração de PDF (FPDF2)
 │
 ├── 🌐 INTERFACE E API
-│ ├── app_streamlit.py # Interface web interativa
-│ └── api_fastapi.py # API REST (FastAPI)
+│   ├── app_streamlit.py            # Interface web interativa
+│   └── api_fastapi.py              # API REST (FastAPI)
 │
 └── 📤 SAÍDAS
-├── models/ # Modelos treinados (.pkl)
-├── results/figures/ # Gráficos e relatórios
-└── results/dados_streamlit.pkl # Dados para dashboard
+    ├── models/                     # Modelos treinados (.pkl)
+    ├── results/figures/            # Gráficos e relatórios
+    └── results/dados_streamlit.pkl # Dados para dashboard
+```
 
 ### 🔄 Fluxo de Dados
+
+```
 ┌─────────────────────────────────────────────────────────────┐
-│ 1. CARREGAMENTO │
-│ Dataset Kaggle → Pandas DataFrame (284.807 × 31) │
+│  1. CARREGAMENTO                                            │
+│     Dataset Kaggle → Pandas DataFrame (284.807 × 31)       │
 └────────────────────┬────────────────────────────────────────┘
-│
+                     │
 ┌────────────────────▼────────────────────────────────────────┐
-│ 2. ENGENHARIA DE FEATURES (70+ variáveis em 7 categorias) │
-│ • Temporais • Frequência • Valor │
-│ • Distância Temporal • Interação │
-│ • Polinomiais • Risco Composto │
+│  2. ENGENHARIA DE FEATURES (70+ variáveis em 7 categorias)  │
+│     • Temporais  • Frequência  • Valor                     │
+│     • Distância Temporal  • Interação                      │
+│     • Polinomiais  • Risco Composto                        │
 └────────────────────┬────────────────────────────────────────┘
-│
+                     │
 ┌────────────────────▼────────────────────────────────────────┐
-│ 3. PRÉ-PROCESSAMENTO │
-│ • Split estratificado (80/20) │
-│ • SMOTE (balanceamento no treino) │
-│ • StandardScaler (normalização) │
+│  3. PRÉ-PROCESSAMENTO                                       │
+│     • Split estratificado (80/20)                          │
+│     • SMOTE (balanceamento no treino)                      │
+│     • StandardScaler (normalização)                        │
 └────────────────────┬────────────────────────────────────────┘
-│
+                     │
 ┌────────────────────▼────────────────────────────────────────┐
-│ 4. TREINAMENTO DE 10 MODELOS │
-│ ┌─────────────────────────────────────────────┐ │
-│ │ SUPERVISIONADOS (8 modelos) │ │
-│ │ • Random Forest • XGBoost • LightGBM │ │
-│ │ • Voting Classifier • Stacking Ensemble │ │
-│ │ • Threshold Dinâmico • Sistema Híbrido │ │
-│ │ • Auto-Melhorado (Self-Improvement) │ │
-│ └─────────────────────────────────────────────┘ │
-│ ┌─────────────────────────────────────────────┐ │
-│ │ NÃO-SUPERVISIONADOS (2 modelos) │ │
-│ │ • Isolation Forest • Autoencoder │ │
-│ └─────────────────────────────────────────────┘ │
+│  4. TREINAMENTO DE 10 MODELOS                               │
+│     ┌─────────────────────────────────────────────┐        │
+│     │ SUPERVISIONADOS (8 modelos)                 │        │
+│     │ • Random Forest  • XGBoost  • LightGBM      │        │
+│     │ • Voting Classifier  • Stacking Ensemble    │        │
+│     │ • Threshold Dinâmico  • Sistema Híbrido     │        │
+│     │ • Auto-Melhorado (Self-Improvement)         │        │
+│     └─────────────────────────────────────────────┘        │
+│     ┌─────────────────────────────────────────────┐        │
+│     │ NÃO-SUPERVISIONADOS (2 modelos)             │        │
+│     │ • Isolation Forest  • Autoencoder           │        │
+│     └─────────────────────────────────────────────┘        │
 └────────────────────┬────────────────────────────────────────┘
-│
+                     │
 ┌────────────────────▼────────────────────────────────────────┐
-│ 5. TÉCNICAS PROFISSIONAIS │
-│ • Threshold Dinâmico (custo financeiro) │
-│ • Sistema Híbrido (Regras + ML) │
-│ • Auto-Aprendizado (Self-Improvement System) │
-│ • Model Drift Detection (KS Test + PSI) │
-│ • SHAP Avançado (Explainability) │
+│  5. TÉCNICAS PROFISSIONAIS                                  │
+│     • Threshold Dinâmico (custo financeiro)                │
+│     • Sistema Híbrido (Regras + ML)                        │
+│     • Auto-Aprendizado (Self-Improvement System)           │
+│     • Model Drift Detection (KS Test + PSI)                │
+│     • SHAP Avançado (Explainability)                       │
 └────────────────────┬────────────────────────────────────────┘
-│
+                     │
 ┌────────────────────▼────────────────────────────────────────┐
-│ 6. SAÍDAS │
-│ • Interface Web (Streamlit) │
-│ • API REST (FastAPI) │
-│ • Relatórios PDF (FPDF2) │
-│ • Dashboards (Matplotlib/Plotly) │
-│ • Modelos Serializados (Joblib) │
+│  6. SAÍDAS                                                  │
+│     • Interface Web (Streamlit)                            │
+│     • API REST (FastAPI)                                   │
+│     • Relatórios PDF (FPDF2)                               │
+│     • Dashboards (Matplotlib/Plotly)                       │
+│     • Modelos Serializados (Joblib)                        │
 └─────────────────────────────────────────────────────────────┘
+```
 
 ### 📊 Resumo por Camada
 
@@ -275,8 +277,6 @@ deteccao-anomalias-xgb/
 | **Saídas** | 3 | Models (.pkl), Results (figures), Data (.pkl) |
 
 **Total:** 29 componentes organizados em 8 camadas funcionais
-
-```
 
 ---
 
@@ -377,17 +377,16 @@ deteccao-anomalias-xgb/
 │   ├── scaler.pkl
 │   └── drift_detector.pkl
 │
-├── 📂 results/                        # Resultados (gerado)
-   ├── dados_streamlit.pkl             # Dados para Streamlit
-   └── figures/
-       ├── cm_*.png                    # Matrizes de confusão
-       ├── roc_*.png                   # Curvas ROC
-       ├── pr_*.png                    # Curvas Precision-Recall
-       ├── shap_*.png                  # Gráficos SHAP
-       ├── dashboard_*.png             # Dashboards profissionais
-       ├── insight_*.png               # Cards de insights
-       └── relatorio_completo_fraudes.pdf
-
+├── 📂 results/                         # Resultados (gerado)
+│   ├── dados_streamlit.pkl             # Dados para Streamlit
+│   └── figures/
+│       ├── cm_*.png                    # Matrizes de confusão
+│       ├── roc_*.png                   # Curvas ROC
+│       ├── pr_*.png                    # Curvas Precision-Recall
+│       ├── shap_*.png                  # Gráficos SHAP
+│       ├── dashboard_*.png             # Dashboards profissionais
+│       ├── insight_*.png               # Cards de insights
+│       └── relatorio_completo_fraudes.pdf
 ```
 
 ### 📊 Resumo por Categoria
@@ -415,7 +414,7 @@ deteccao-anomalias-xgb/
 
 ### Passo a Passo
 
-
+```bash
 # 1. Clone o repositório
 git clone https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb.git
 cd deteccao-anomalias-xgb
@@ -431,114 +430,156 @@ source venv/bin/activate
 
 # 4. Instale as dependências
 pip install -r requirements.txt
+```
 
+---
+
+## ▶️ Uso
+
+### 1. Treinar Modelos e Gerar Relatórios
+
+```bash
+python main.py
 ```
-```
-### ▶️ Uso
-1. Treinar Modelos e Gerar Relatórios
 
 Este comando irá:
-Carregar o dataset (284.807 transações)
+- Carregar o dataset (284.807 transações)
+- Aplicar engenharia de features (70+ variáveis)
+- Treinar 10 modelos de ML/DL
+- Aplicar técnicas profissionais (Threshold Dinâmico, Sistema Híbrido, Auto-aprendizado)
+- Detectar Model Drift
+- Gerar SHAP avançado
+- Criar relatórios PDF e dashboards
+- Salvar modelos treinados
 
-Aplicar engenharia de features (70+ variáveis)
+**Tempo estimado:** ~30-40 minutos
 
-Treinar 10 modelos de ML/DL
+### 2. Interface Web (Streamlit)
 
-Aplicar técnicas profissionais (Threshold Dinâmico, Sistema Híbrido, Auto-aprendizado)
-
-Detectar Model Drift
-
-Gerar SHAP avançado
-
-Criar relatórios PDF e dashboards
-
-Salvar modelos treinados
-
-Tempo estimado: ~30-40 minutos
-
-2. Interface Web (Streamlit)
- 
-Acesse: http://localhost:8501
+```bash
+streamlit run app_streamlit.py
 ```
+
+Acesse: `http://localhost:8501`
+
+---
+
+## 🔌 API REST
+
+### Endpoints
+
+| Método | Endpoint | Descrição |
+|:------:|----------|-----------|
+| GET | `/` | Informações da API |
+| GET | `/health` | Health check |
+| POST | `/predict` | Predição de fraude |
+
+### Exemplo de Request
+
+```bash
+# Iniciar a API
+python api_fastapi.py
+
+# Fazer uma predição
+curl -X POST "http://localhost:8000/predict" \
+     -H "Content-Type: application/json" \
+     -d '{"features": [0.1, -0.2, 0.5, ...]}'
 ```
-### 🔌API REST
 
-Endpoints
-Método
-Endpoint
-Descrição
+### Exemplo de Response
 
-GET
-/
-Informações da API
+```json
+{
+  "transacao_id": "TXN_20260618120000000000",
+  "probabilidade_fraude": 0.8547,
+  "status": "BLOCKED",
+  "threshold_utilizado": 0.5,
+  "timestamp": "2026-06-18T12:00:00",
+  "modelo_utilizado": "Random Forest Pipeline (Real)"
+}
+```
 
-GET
-/health
-Health check
+Acesse a documentação interativa: `http://localhost:8000/docs`
 
-POST
-/predict
-Predição de fraude
-Exemplo de Request
+---
 
-Exemplo de Response
-json
+## 🧪 Testes
 
-### Testes
 O projeto inclui testes unitários para:
-Pipelines de ML
-Motor de decisão (threshold dinâmico e sistema híbrido)
-Sistema de auto-aprendizado
-Engenharia de features
-Módulo de avaliação
+- Pipelines de ML
+- Motor de decisão (threshold dinâmico e sistema híbrido)
+- Sistema de auto-aprendizado
+- Engenharia de features
+- Módulo de avaliação
+
+```bash
+python test_models.py
 ```
 
-📈 Métricas de Negócio
-Além das métricas tradicionais de ML, o projeto calcula métricas de negócio:
-Métrica
-Valor
-Custo por Transação
-R$ 0,0022
-Taxa de Aprovação
-99,81%
-Valor Médio/Alerta
-R$ 93,92
-Break-even
-82 fraudes
-Índice Eficiência
-76,9%
-Payback Period
-2,4 meses
-```
-### 🤝 Contribuição
-Contribuições são bem-vindas! Sinta-se à vontade para:  
-Reportar bugs  
-Sugerir melhorias  
-Criar pull requests  
+---
 
-### 📄 Licença
+## 💰 Métricas de Negócio
+
+Além das métricas tradicionais de ML, o projeto calcula **métricas de negócio avançadas**:
+
+| Métrica | Valor | Descrição |
+|---------|:-----:|-----------|
+| **Custo por Transação** | R$ 0,0022 | Custo médio para analisar cada transação |
+| **Taxa de Aprovação** | 99,81% | % de transações aprovadas sem bloqueio |
+| **Valor Médio/Alerta** | R$ 93,92 | Valor médio economizado por alerta gerado |
+| **Break-even** | 82 fraudes | Fraudes necessárias para pagar o sistema |
+| **Índice Eficiência** | 76,9% | % de alertas que são fraudes reais |
+| **Payback Period** | 2,4 meses | Tempo de retorno do investimento |
+
+---
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para:
+- 🐛 Reportar bugs
+- 💡 Sugerir melhorias
+- 🔀 Criar pull requests
+- 📚 Melhorar a documentação
+
+---
+
+## 📄 Licença
+
 Este projeto está licenciado sob a licença MIT.  
-Veja o arquivo [LICENSE](https://github.com/brunofugideoliveiradev/deteccao-anomalias-xgb/blob/main/LICENSE) para mais detalhes.  
+Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-### 👤 Autor
-Bruno Fugi     
-Projeto desenvolvido para Bootcamp Bradesco - GenAI, Dados & Cyber  
+---
 
-[![GitHub](https://img.shields.io/badge/GitHub-@brunofugideoliveiradev-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brunofugideoliveiradev)  
+## 👤 Autor
+
+<div align="center">
+
+### **Bruno Fugi**
+
+**Bootcamp Bradesco - GenAI, Dados & Cyber**
+
+[![GitHub](https://img.shields.io/badge/GitHub-@brunofugideoliveiradev-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brunofugideoliveiradev)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Bruno%20Fugi-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-fugi-de-oliveira-879938414)
- 
 
-### 📚 Referências
-- [Credit Card Fraud Detection Dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)  
-- [Scikit-learn Documentation](https://scikit-learn.org/stable/)  
-- [XGBoost Documentation](https://xgboost.readthedocs.io/en/stable/)  
-- [TensorFlow Documentation](https://www.tensorflow.org/)  
-- [Streamlit Documentation](https://docs.streamlit.io/)  
-- [FastAPI Documentation](https://fastapi.tiangolo.com/)  
+</div>
 
-```
+---
 
-Desenvolvido para: Bootcamp Bradesco - GenAI, Dados & Cyber | 2026  
-⭐ Se este projeto foi útil, considere dar uma estrela!
+## 📚 Referências
 
+- [Credit Card Fraud Detection Dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+- [Scikit-learn Documentation](https://scikit-learn.org/stable/)
+- [XGBoost Documentation](https://xgboost.readthedocs.io/en/stable/)
+- [TensorFlow Documentation](https://www.tensorflow.org/)
+- [Streamlit Documentation](https://docs.streamlit.io/)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
 
+---
+
+<div align="center">
+
+### ⭐ Se este projeto foi útil, considere dar uma estrela!
+
+**Desenvolvido para: Bootcamp Bradesco - GenAI, Dados & Cyber | 2026**
+
+</div>
